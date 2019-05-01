@@ -1,6 +1,6 @@
 /* 愛因斯坦的質能轉換公式
  * simple calculation E等於 m*c平方: e=(m*C*C)
- * Data: 2018.01.02
+ * Data: 2019.01.02
  */
 public class CH02_05
 {
