@@ -12,7 +12,7 @@ public class CH04_01_Exercise
 		int[] A;
 		A = new int[5];
 		System.out.println("A array length: " + A.length);
-		System.out.print("A Array 元素值:");
+		System.out.print("A Array 元素質:");
 		
 //		for (int i=0; i<A.length; i++)
 //			System.out.print(A[i]+" ");
@@ -23,7 +23,7 @@ public class CH04_01_Exercise
 		
 		boolean[] B = new boolean[5];
 		System.out.println("B array length: " + B.length);
-		System.out.print("B Array 元素值:");
+		System.out.print("B Array 元素質:");
 		
 //		for (int i=0; i<B.length; i++)
 //			System.out.print(B[i]+" ");

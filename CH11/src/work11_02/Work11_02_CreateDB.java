@@ -25,7 +25,7 @@ class CCreate_DB_Tabel
 		
 		// 建立 Connection 物件 及 建立資料庫
 		try {
-			conn = DriverManager.getConnection("jdbc:mysql://localhost/?user=root&password=test");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost/?user=root&password=wPress_05");
 			stmt = conn.createStatement();
 			String Create_DB = "CREATE DATABASE " + db_name;
 			stmt.executeUpdate(Create_DB);
@@ -41,7 +41,7 @@ class CCreate_DB_Tabel
 		
 		// 建立資料表
 		try {
-			conn = DriverManager.getConnection("jdbc:mysql://localhost/" + db_name + "?user=root&password=test");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost/" + db_name + "?user=root&password=wPress_05");
 			stmt = conn.createStatement();
 			
 			String Create_TB = "CREATE TABLE `" + db_table + "`";

@@ -14,8 +14,7 @@ public class CH04_09
 		
 		System.out.println("\nClone an array to B: ...\n");
 		int B[] = new int[A.length];
-		// Copy Array by .clone method
-		B=(int[]) A.clone();
+		B = (int[])A.clone();
 		
 		System.out.println("\n\n§ó§ï B[3]=50 -----------------------------------\n");
 		B[3] = 50;

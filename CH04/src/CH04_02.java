@@ -1,7 +1,7 @@
 /* Array exercise
  * 2 method:
  * int[5]
- * new int{item1, item2, item3, item4}
+ * new int{item1, item1, item1, item1}
  * */
 
 

@@ -5,7 +5,7 @@ public class WORK03_03_Q
 
 	public static void main(String[] args) throws IOException
 	{
-		int sum = 0, tmp1=0, tmp2=0;
+		int sum = 0;
 		BufferedReader keyin;
 		keyin = new BufferedReader(new InputStreamReader(System.in));
 		
@@ -24,40 +24,14 @@ public class WORK03_03_Q
 			num2 = Integer.parseInt(st2);	
 		}
 		
-		tmp1 = num1;
-		tmp2 = num2;
-		
 		int diff = num2 - num1;
 		System.out.println("數字間格為" + diff);
-		
-		for (int i=0; i<=diff; i++)
+	
+		for (int i=num1; i<diff; i++)
 		{
-			System.out.println( "sum="+ sum + " + num="+ num1);
-			sum = sum + num1;
-			num1++;
+			System.out.println("i="+ i + "sum="+ sum);
+			sum = sum + num1
 		}
-		System.out.println("for 迴圈總和=" + sum);
-		
-		sum=0;
-		num1 = tmp1;
-		num2 = tmp2;
-		while (num1 <= num2)
-		{
-			System.out.println( "sum="+ sum + " + num="+ num1);
-			sum = sum + num1;
-			num1++;
-		}
-		System.out.println("while 迴圈總和=" + sum);
-		
-		sum=0;
-		num1 = tmp1;
-		do
-		{
-			System.out.println( "sum="+ sum + " + num="+ num1);
-			sum = sum + num1;
-			num1 +=1;			
-		} while (num1 <= num2 );
-		System.out.println("do...while 迴圈總和=" + sum);		
 	}
 
 }

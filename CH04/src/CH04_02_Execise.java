@@ -10,35 +10,41 @@ public class CH04_02_Execise
 
 	public static void main(String[] args) throws IOException
 	{
-		String [] course = new String[]{"姓名", "國文", "數學", "社會", "自然"};
-		int[] score = new int[4];
-		
 		BufferedReader keyin;
-		keyin = new BufferedReader(new InputStreamReader(System.in));		
+		keyin = new BufferedReader(new InputStreamReader(System.in));
 		
-		// ask to enter score
-		for (int i=0; i<score.length; i++)
+		while () 
 		{
-			System.out.println("請輸入"+ course[i+1] + "成績: ");
-			int EnterScore = Integer.parseInt(keyin.readLine());
-			
-			while ((EnterScore < 0) || (EnterScore > 100))
-			{
-				System.out.println("輸入不正確，請重新輸入"+ course[i+1] + "成績: ");
-				EnterScore = Integer.parseInt(keyin.readLine());
-			}
-			
-			// 取得輸入成績，並放入陣列中
-			score[i] = EnterScore;
+			System.out.println("Enter 國文分數: ");
+			String st1 = keyin.readLine();
+			int num1 = Integer.parseInt(st1);
 		}
 		
-		// 印出 科目及成績
+		
+		System.out.println("Enter 數學分數: ");
+		String st2 = keyin.readLine();
+		int num2 = Integer.parseInt(st2);
+		System.out.println("Enter 社會分數: ");
+		String st3 = keyin.readLine();
+		int num3 = Integer.parseInt(st3);
+		System.out.println("Enter 自然分數: ");
+		String st4 = keyin.readLine();
+		int num4 = Integer.parseInt(st4);
+		
+		String [] course = new String[]{"姓名", "國文", "數學", "社會", "自然"};
+				
 		for (int i = 0; i < course.length; i++)
 			System.out.print(course[i] + "\t");
 		
 		System.out.println();
-		System.out.print("吳勁律\t");	
-
+		System.out.print("吳勁律\t");
+		
+		int[] score = new int[4];		
+		score[0] = num1;
+		score[1] = num2;
+		score[2] = num3;
+		score[3] = num4;
+		
 		int sum = 0;
 		for (int i = 0; i < score.length; i++)
 		{
@@ -46,8 +52,8 @@ public class CH04_02_Execise
 			sum += score[i];
 		}			
 		System.out.println();
-		System.out.print("\nSum=" + sum);
-		System.out.print("\nAvg=" + (float)sum/score.length);	
+		System.out.println("\nSum=" + sum);
+		System.out.println("\nAvg=" + (float)sum/score.length);	
 	}
 	
 }

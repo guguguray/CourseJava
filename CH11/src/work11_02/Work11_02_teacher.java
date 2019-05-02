@@ -15,11 +15,9 @@ class CMemberF extends JFrame implements ActionListener
 	private String[] txtBtn = { "新增", "查詢", "更新", "刪除", "結束" };
 	private JButton[] btn = new JButton[txtBtn.length];
 	private JButton btnOK, btnCancel;
-	
 	private JLabel lblId, lblPassword, lblPasswordRepeat, lblName, lblMoney;
 	private JTextField txtId, txtName, txtMoney;
 	private JPasswordField pwfPassword, pwfPasswordRepeat;
-	
 	private int btn_No, money;
 	private String id, password, password_repeat, name;
 	private boolean is_find, is_check;
@@ -41,7 +39,7 @@ class CMemberF extends JFrame implements ActionListener
 		if (e.getSource() == btnCancel)
 			ShowItem(2);
 
-		if (e.getSource() == btn[0])	//  新增
+		if (e.getSource() == btn[0])
 		{
 			btn_No = 0;
 			ShowItem(1);
@@ -50,13 +48,13 @@ class CMemberF extends JFrame implements ActionListener
 		if (btn_No == 0 && e.getSource() == btnOK)
 			NewData();
 
-		if (e.getSource() == btn[1])  // 查詢
+		if (e.getSource() == btn[1])
 		{
 			btn_No = 1;
 			InquireData();
 		}
 
-		if (e.getSource() == btn[2])	// 更新
+		if (e.getSource() == btn[2])
 		{
 			btn_No = 2;
 			UpDataCheck();
@@ -65,41 +63,36 @@ class CMemberF extends JFrame implements ActionListener
 		if (btn_No == 2 && e.getSource() == btnOK)
 			UpData();
 
-		if (e.getSource() == btn[3])	// 刪除
+		if (e.getSource() == btn[3])
 		{
 			btn_No = 3;
 			DeleteData();
 		}
 
-		if (e.getSource() == btn[4])	// 結束
+		if (e.getSource() == btn[4])
 			System.exit(0);
 	}
-	
-	// 建立新資料
+
 	void NewData()
 	{
 		is_check = true;
-		// 取得帳號、密碼、重複密碼、姓名欄位等的 輸入值
 		id = txtId.getText().trim();
 		password = new String(pwfPassword.getPassword());
 		password_repeat = new String(pwfPasswordRepeat.getPassword());
 		name = txtName.getText().trim();
-		
-		// 檢查 輸入的欄位是否為空白
+
 		if (id.equals("") || password.equals("") || name.equals(""))
 		{
 			ErrDataMsg("帳號、密碼或姓名不能空白！");
 			is_check = false;
 		}
-		
-		// 檢查 帳號 密碼欄位輸入的值是否超過 10 個字
+
 		if (id.length() > 10 || password.length() > 10)
 		{
 			ErrDataMsg("帳號或密碼最多10個字！");
 			is_check = false;
 		}
-		
-		// 檢查輸入的資料是否已存在資料庫
+
 		is_find = IsFindDB(1, id, password, false);
 
 		if (is_find)
@@ -268,7 +261,7 @@ class CMemberF extends JFrame implements ActionListener
 
 		try
 		{
-			conn = DriverManager.getConnection("jdbc:mysql://localhost/" + db_name + "?user=root&password=test");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost/" + db_name + "?user=root&password=wPress_05");
 		}
 		catch (SQLException e)
 		{
